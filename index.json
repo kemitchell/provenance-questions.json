@@ -1,0 +1,43 @@
+{ "prompts": [
+    { "variable": "newVersion",
+      "prompt": "Is this release a new version of a previously released project?",
+      "schema": {
+        "type": "boolean" } },
+    { "variable": "copiedPreexisting",
+      "prompt": "Was anything in this release copied from preexisting work?",
+      "schema": {
+        "type": "boolean" } },
+    { "variable": "basedOnPreexisting",
+      "prompt": "Is anything in this release based on other work?",
+      "schema": {
+        "type": "boolean" } },
+    { "variable": "translatedPreexisting",
+      "prompt": "Was anything in this release translated from other work?",
+      "schema": {
+        "type": "boolean" } },
+    { "variable": "contributors",
+      "prompt": "Who contributed to this release?",
+      "schema": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "type": "object",
+          "properties": {
+            "legalName": {
+              "type": "string",
+              "minLength": 1 },
+            "country": {
+              "type": "string",
+              "minLength": 1 },
+            "year": {
+              "type": "integer",
+              "minimum": 2000,
+              "maximum": 2050 } },
+          "required": [ "legalName", "country", "year" ] } } } ],
+  "conclusions": {
+    "probablyDerivativeWork": {
+      "comment": "This release is probably a \"derivative work\" as defined in section 101 of the Copyright Act",
+      "expression": {
+        "or": [
+          "newVersion", "copiedPreexisting", "basedOnPreexisting",
+          "translatedPreexisting" ] } } } }

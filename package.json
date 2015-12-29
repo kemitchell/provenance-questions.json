@@ -1,0 +1,19 @@
+{
+  "name": "provenance-questions",
+  "description": "open-source software provenance questions",
+  "version": "0.0.0",
+  "author": "Kyle E. Mitchell <kyle@kemitchell.com> (https://kemitchell.com/)",
+  "devDependencies": {
+    "boolean-json-variables": "^2.0.3",
+    "object-values": "^1.0.0",
+    "tape": "^4.4.0"
+  },
+  "files": [
+    "index.js"
+  ],
+  "license": "CC0-1.0",
+  "repository": "kemitchell/provenance-questions.js",
+  "scripts": {
+    "test": "node test.js"
+  }
+}
