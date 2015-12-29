@@ -12,7 +12,7 @@
     "index.js"
   ],
   "license": "CC0-1.0",
-  "repository": "kemitchell/provenance-questions.js",
+  "repository": "kemitchell/provenance-questions.json",
   "scripts": {
     "test": "node test.js"
   }
