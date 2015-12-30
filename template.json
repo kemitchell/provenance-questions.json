@@ -15,6 +15,16 @@
       "prompt": "Was anything in this release translated from other work?",
       "schema": {
         "type": "boolean" } },
+    { "variable": "email",
+      "prompt": "What is your e-mail address?",
+      "schema": {
+        "type": "string",
+        "format": "email" } },
+    { "variable": "country",
+      "prompt": "In what country did you write the new material in this release?",
+      "schema": {
+        "type": "string",
+        "enum": "$COUNTRIES" } },
     { "variable": "contributors",
       "prompt": "Who contributed to this release?",
       "schema": {
@@ -29,11 +39,28 @@
             "country": {
               "type": "string",
               "minLength": 1 },
+            "email": {
+              "type": "string",
+              "format": "email" },
             "year": {
               "type": "integer",
               "minimum": 2000,
               "maximum": 2050 } },
-          "required": [ "legalName", "country", "year" ] } } } ],
+          "required": [ "legalName", "country", "year" ] } } },
+    { "variable": "employed",
+      "prompt": "Were you employed anywhere when you wrote anything new in this release?",
+      "schema": {
+        "type": "boolean" } },
+    { "variable": "withinScopeOfEmployment",
+      "prompt": "Is anything new in this release the slightest bit related to what you do for your employer?",
+      "skip": {
+        "not": "employed" },
+      "schema": {
+        "type": "boolean" } },
+    { "variable": "forAnother",
+      "prompt": "Did you create anything new in this release for anyone else?",
+      "schema": {
+        "type": "boolean" } } ],
   "conclusions": {
     "derivativeWork": {
       "comment": "The release is a \"derivative work\" as defined in section 101 of the Copyright Act.",

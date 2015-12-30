@@ -5,15 +5,19 @@
   "author": "Kyle E. Mitchell <kyle@kemitchell.com> (https://kemitchell.com/)",
   "devDependencies": {
     "boolean-json-variables": "^2.0.3",
+    "country-data": "0.0.24",
+    "lispy-json": "^1.1.2",
     "object-values": "^1.0.0",
     "tape": "^4.4.0"
   },
   "files": [
-    "index.js"
+    "index.json"
   ],
   "license": "CC0-1.0",
   "repository": "kemitchell/provenance-questions.json",
   "scripts": {
+    "prepublish": "node build < template.json > index.json",
+    "pretest": "npm run prepublish",
     "test": "node test.js"
   }
 }
