@@ -7,7 +7,6 @@
     "array-uniq": "^1.0.2",
     "boolean-json-schema": "^3.0.0",
     "boolean-json-variables": "^2.0.3",
-    "country-data": "0.0.24",
     "json-schema": "^0.2.2",
     "json-schema-ref-parser": "^1.4.0",
     "lispy-json": "^1.1.2",

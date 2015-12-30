@@ -25,11 +25,10 @@
       "schema": {
         "type": "string",
         "minLength": 1 } },
-    { "variable": "country",
-      "prompt": "In what country did you write the new material in this release?",
+    { "variable": "unitedStates",
+      "prompt": "Did you write the new material in this release in the United States of America?",
       "schema": {
-        "type": "string",
-        "enum": "$COUNTRIES" } },
+        "type": "boolean" } },
     { "variable": "year",
       "prompt": "In what year did you write the new material in this release?",
       "schema": {
