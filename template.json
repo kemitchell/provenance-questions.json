@@ -3,6 +3,27 @@
       "prompt": "Is this release a new version of a previously released project?",
       "schema": {
         "type": "boolean" } },
+    { "variable": "project",
+      "prompt": "What is the project called?",
+      "skip": {
+        "not": "newVersion" },
+      "schema": {
+        "type": "string",
+        "minLength": 1 } },
+    { "variable": "project",
+      "prompt": "What was the last release of the project that this release builds on called?",
+      "skip": {
+        "not": "newVersion" },
+      "schema": {
+        "type": "string",
+        "minLength": 1 } },
+    { "variable": "project",
+      "prompt": "What is the project's URL?",
+      "skip": {
+        "not": "newVersion" },
+      "schema": {
+        "type": "string",
+        "format": "uri" } },
     { "variable": "copiedPreexisting",
       "prompt": "Was anything in this release copied from preexisting work?",
       "schema": {
