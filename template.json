@@ -1,10 +1,12 @@
 { "prompts": [
     { "variable": "newVersion",
       "prompt": "Is this release a new version of a previously released project?",
+      "comment": "For example, if this release is foolib version 1.2.0, which was based on foolib version 1.1.9, foolib version 1.2.0 is based on foolib version 1.1.9.",
       "schema": {
         "type": "boolean" } },
     { "variable": "project",
       "prompt": "What is the project called?",
+      "comment": "If this release is foolib version 1.2.0, the name of the project is \"foolib\".",
       "skip": {
         "not": "newVersion" },
       "schema": {
@@ -12,6 +14,7 @@
         "minLength": 1 } },
     { "variable": "project",
       "prompt": "What was the last release of the project that this release builds on called?",
+      "comment": "If this release is foolib version 1.2.0, the last release might be \"1.9.2\".",
       "skip": {
         "not": "newVersion" },
       "schema": {
@@ -19,6 +22,7 @@
         "minLength": 1 } },
     { "variable": "project",
       "prompt": "What is the project's URL?",
+      "comment": "If your project has a permanent homepage, like http://foolib.org, use that. Otherwise, a source code repository URL like https://github.com/foolib/foolib will do.",
       "skip": {
         "not": "newVersion" },
       "schema": {
@@ -26,14 +30,17 @@
         "format": "uri" } },
     { "variable": "copiedPreexisting",
       "prompt": "Was anything in this release copied from preexisting work?",
+      "comment": "For example, was work pasted in from an example from documentation, a programming help site, or another open-source project?",
       "schema": {
         "type": "boolean" } },
     { "variable": "basedOnPreexisting",
       "prompt": "Is anything in this release based on other work?",
+      "comment": "For example, was new material in this release based on a \"starter\" project or generated using a project scaffolding tool?",
       "schema": {
         "type": "boolean" } },
     { "variable": "translatedPreexisting",
       "prompt": "Was anything in this release translated from other work?",
+      "comment": "For example, does this release include code that is a translation of code in another programming language?",
       "schema": {
         "type": "boolean" } },
     { "variable": "email",
@@ -43,6 +50,12 @@
         "format": "email" } },
     { "variable": "name",
       "prompt": "What is your legal name?",
+      "schema": {
+        "type": "string",
+        "minLength": 1 } },
+    { "variable": "residence",
+      "prompt": "Where do you live?",
+      "comment": "This information is used to make answers more specific to you, since people may share names in common.",
       "schema": {
         "type": "string",
         "minLength": 1 } },
@@ -62,16 +75,19 @@
         "type": "boolean" } },
     { "variable": "withinScopeOfEmployment",
       "prompt": "Is anything new in this release the slightest bit related to what you do for your employer?",
+      "comment": "For example, if you are employed as a programmer, even if you believe your work was only remotely related to your employment and that you used only your own time and equipment to write it.",
       "skip": {
         "not": "employed" },
       "schema": {
         "type": "boolean" } },
     { "variable": "forAnother",
-      "prompt": "Did you create anything new in this release for anyone else?",
+      "prompt": "Did you create anything new in this release for anyone else, rather than for yourself or for the project itself?",
+      "comment": "For example, did you create anything in connection with a contract for programming or consulting?",
       "schema": {
         "type": "boolean" } },
     { "variable": "workedTogether",
-      "prompt": "Did you work together with anyone else in preparing your contributions to this release, such as by pair programming?",
+      "prompt": "Did you work together with anyone else in preparing your contributions to this release?",
+      "comment": "For example, did you contribute to this release by pair programming?",
       "schema": {
         "type": "boolean" } },
     { "variable": "inseparable",
@@ -80,10 +96,12 @@
         "type": "boolean" } },
     { "variable": "assignedIP",
       "prompt": "Have you assigned any intellectual property since the time you wrote all your contributions to this release?",
+      "comment": "You may have assigned intellectual property if you started a company, signed a contract, or settled a lawsuit about intellectual property.",
       "schema": {
         "type": "boolean" } },
     { "variable": "didNotAssign",
       "prompt": "Are you absolutely certain, beyond a shadow of a doubt, that you did not assign any intellectual property covering your contributions to this release?",
+      "comment": "This is a legal question. If you have not received the advice of a lawyer, you should not be absolutely certain.",
       "schema": {
         "type": "boolean" } } ],
   "conclusions": {

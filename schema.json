@@ -14,6 +14,9 @@
           "prompt": {
             "type": "string",
             "minLength": 1 },
+          "comment": {
+            "type": "string",
+            "minLength": 1 },
           "skip": {
             "$ref": "./node_modules/boolean-json-schema/index.json" },
           "schema": {
