@@ -69,6 +69,14 @@
     { "variable": "forAnother",
       "prompt": "Did you create anything new in this release for anyone else?",
       "schema": {
+        "type": "boolean" } },
+    { "variable": "workedTogether",
+      "prompt": "Did you work together with anyone else in preparing your contributions to this release, such as by pair programming?",
+      "schema": {
+        "type": "boolean" } },
+    { "variable": "inseparable",
+      "prompt": "Can the parts of this release that you made be easily and clearly separated the parts the other person made while you worked together?",
+      "schema": {
         "type": "boolean" } } ],
   "conclusions": {
     "derivativeWork": {
@@ -80,4 +88,6 @@
       "expression": {
         "or": [
           "newVersion", "copiedPreexisting", "basedOnPreexisting",
-          "translatedPreexisting" ] } } } }
+          "translatedPreexisting" ] } },
+    "jointWork": {
+      "and": [ "workedTogether", "inseparable" ] } } }
