@@ -14,6 +14,8 @@
           "prompt": {
             "type": "string",
             "minLength": 1 },
+          "skip": {
+            "$ref": "./node_modules/boolean-json-schema/index.json" },
           "schema": {
             "$ref": " http://json-schema.org/draft-04/schema#" } } } },
     "conclusions": {
@@ -27,4 +29,4 @@
               "type": "string",
               "minLength": 1 },
             "expression": {
-              "$ref": "http://json-schema.org/draft-04/schema" } } } } } } }
+              "$ref": "./node_modules/boolean-json-schema/index.json" } } } } } } }

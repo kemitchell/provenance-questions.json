@@ -77,6 +77,14 @@
     { "variable": "inseparable",
       "prompt": "Can the parts of this release that you made be easily and clearly separated the parts the other person made while you worked together?",
       "schema": {
+        "type": "boolean" } },
+    { "variable": "assignedIP",
+      "prompt": "Have you assigned any intellectual property since the time you wrote all your contributions to this release?",
+      "schema": {
+        "type": "boolean" } },
+    { "variable": "didNotAssign",
+      "prompt": "Are you absolutely certain, beyond a shadow of a doubt, that you did not assign any intellectual property covering your contributions to this release?",
+      "schema": {
         "type": "boolean" } } ],
   "conclusions": {
     "derivativeWork": {
@@ -90,4 +98,12 @@
           "newVersion", "copiedPreexisting", "basedOnPreexisting",
           "translatedPreexisting" ] } },
     "jointWork": {
-      "and": [ "workedTogether", "inseparable" ] } } }
+      "comment": "The release may include joint work.",
+      "expression": {
+        "and": [ "workedTogether", "inseparable" ] } },
+    "maybeAssigned": {
+      "comment": "The author's contribution may have been assigned.",
+      "expression": {
+        "and": [
+          "assignedIP",
+          { "not": "didNotAssign" } ] } } } }
