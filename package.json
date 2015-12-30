@@ -4,11 +4,16 @@
   "version": "0.0.0",
   "author": "Kyle E. Mitchell <kyle@kemitchell.com> (https://kemitchell.com/)",
   "devDependencies": {
+    "array-uniq": "^1.0.2",
+    "boolean-json-schema": "^3.0.0",
     "boolean-json-variables": "^2.0.3",
     "country-data": "0.0.24",
+    "json-schema": "^0.2.2",
+    "json-schema-ref-parser": "^1.4.0",
     "lispy-json": "^1.1.2",
     "object-values": "^1.0.0",
-    "tape": "^4.4.0"
+    "tape": "^4.4.0",
+    "tv4": "^1.2.7"
   },
   "files": [
     "index.json"

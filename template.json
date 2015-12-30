@@ -30,7 +30,7 @@
       "schema": {
         "type": "string",
         "enum": "$COUNTRIES" } },
-    { "varaiable": "year",
+    { "variable": "year",
       "prompt": "In what year did you write the new material in this release?",
       "schema": {
         "type": "integer",

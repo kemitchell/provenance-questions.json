@@ -1,0 +1,30 @@
+{ "type": "object",
+  "required": [ "prompts", "conclusions" ],
+  "properties": {
+    "prompts": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [ "variable", "prompt", "schema" ],
+        "properties": {
+          "variable": {
+            "type": "string",
+            "minLength": 1 },
+          "prompt": {
+            "type": "string",
+            "minLength": 1 },
+          "schema": {
+            "$ref": " http://json-schema.org/draft-04/schema#" } } } },
+    "conclusions": {
+      "type": "object",
+      "patternProperties": {
+        ".": {
+          "type": "object",
+          "required": [ "comment", "expression" ],
+          "properties": {
+            "comment": {
+              "type": "string",
+              "minLength": 1 },
+            "expression": {
+              "$ref": "http://json-schema.org/draft-04/schema" } } } } } } }
