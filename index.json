@@ -36,7 +36,7 @@
           "required": [ "legalName", "country", "year" ] } } } ],
   "conclusions": {
     "probablyDerivativeWork": {
-      "comment": "This release is probably a \"derivative work\" as defined in section 101 of the Copyright Act",
+      "comment": "The release may be a \"derivative work\" as defined in section 101 of the Copyright Act. The questions do not probe whether the release and preexisting work are substantially similar, by addressing factors under the Abstraction-Filtration-Comparison test or Structure-Sequence-Organization tests.",
       "expression": {
         "or": [
           "newVersion", "copiedPreexisting", "basedOnPreexisting",
