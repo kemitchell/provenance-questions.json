@@ -20,33 +20,22 @@
       "schema": {
         "type": "string",
         "format": "email" } },
+    { "variable": "name",
+      "prompt": "What is your legal name?",
+      "schema": {
+        "type": "string",
+        "minLength": 1 } },
     { "variable": "country",
       "prompt": "In what country did you write the new material in this release?",
       "schema": {
         "type": "string",
         "enum": "$COUNTRIES" } },
-    { "variable": "contributors",
-      "prompt": "Who contributed to this release?",
+    { "varaiable": "year",
+      "prompt": "In what year did you write the new material in this release?",
       "schema": {
-        "type": "array",
-        "minItems": 1,
-        "items": {
-          "type": "object",
-          "properties": {
-            "legalName": {
-              "type": "string",
-              "minLength": 1 },
-            "country": {
-              "type": "string",
-              "minLength": 1 },
-            "email": {
-              "type": "string",
-              "format": "email" },
-            "year": {
-              "type": "integer",
-              "minimum": 2000,
-              "maximum": 2050 } },
-          "required": [ "legalName", "country", "year" ] } } },
+        "type": "integer",
+        "minimum": 2000,
+        "maximum": 2050 } },
     { "variable": "employed",
       "prompt": "Were you employed anywhere when you wrote anything new in this release?",
       "schema": {
